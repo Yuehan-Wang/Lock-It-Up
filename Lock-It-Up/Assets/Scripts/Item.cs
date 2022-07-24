@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
 
     public int rowIndex;
     public int columnIndex;
-    public float xOff = -2.1f;
+    public float xOff = -5f;
     public float yOff = -3f;
     public bool movable = true;
     public void UpdatePosition(){

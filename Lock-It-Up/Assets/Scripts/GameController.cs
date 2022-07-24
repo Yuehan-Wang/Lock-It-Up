@@ -12,11 +12,11 @@ public class GameController : MonoBehaviour
     public GameObject lose;
     public GameObject replay;
     public GameObject success;
-
+    public GameObject logo;
     private ArrayList pot2Arr;
 
-    public int columnNum = 9;
-    public int rowNum = 9;
+    public int columnNum = 20;
+    public int rowNum = 10;
 
     private ArrayList potArr;
     private bool hasStarted = false;
@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
         music.PlaySound("startSound");
         hasStarted = true;
         start.SetActive(false);
-
+        logo.SetActive(false);
         gameOver = false;
         success.SetActive(false);
         lose.SetActive(false);
@@ -93,11 +93,13 @@ public class GameController : MonoBehaviour
                 MoveObject((int)v.y, (int)v.x);
                 if (Escaped()){
                     gameOver = true;
+                    music.PlaySound("loseSound");
                     lose.SetActive(true);
                     replay.SetActive(true);
                     Object.SetActive(false);
                 }
             }else{
+                music.PlaySound("winSound");
                 gameOver = true;
                 success.SetActive(true);
                 replay.SetActive(true);

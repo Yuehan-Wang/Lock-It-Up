@@ -100,5 +100,6 @@ MonoBehaviour:
   game: {fileID: 0}
   rowIndex: 0
   columnIndex: 0
-  xOff: -2.1
+  xOff: -5
   yOff: -3
+  movable: 1
