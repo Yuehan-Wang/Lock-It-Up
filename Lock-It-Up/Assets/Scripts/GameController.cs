@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame(){
+        music.PlaySound("startSound");
         hasStarted = true;
         start.SetActive(false);
 
